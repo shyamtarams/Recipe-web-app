@@ -1,7 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="48b6c60c-f680-43fe-976b-6124ff1af303" name="Default Changelist" comment="" />
+    <list default="true" id="48b6c60c-f680-43fe-976b-6124ff1af303" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Recipe.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/R_User_Library.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recipe/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recipe/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recipe/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Recipe/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/static/home/images/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/static/home/images/enjoy cooking1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/static/home/images/salad1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/static/home/images/vegtbl1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/templates/base2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/login/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/login/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/login/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/login/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/login/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/login/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/login/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,13 +97,18 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/home/templates/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
+            <state relative-caret-position="390">
               <caret line="26" column="33" lean-forward="true" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -99,6 +139,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -117,6 +160,7 @@
     <option name="width" value="939" />
     <option name="height" value="704" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -139,27 +183,6 @@
               <item name="Recipe" type="b2602c69:ProjectViewProjectNode" />
               <item name="Recipe" type="462c0819:PsiDirectoryNode" />
               <item name="home" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Recipe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Recipe" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Recipe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Recipe" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Recipe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Recipe" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -175,6 +198,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/home/static/home/images" />
   </component>
   <component name="RecentsManager">
@@ -217,7 +241,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.33830103" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.3393124" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -306,10 +330,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/home/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
+        <state relative-caret-position="390">
           <caret line="26" column="33" lean-forward="true" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
