@@ -41,6 +41,10 @@ INSTALLED_APPS = [
     #'home',
     #'accounts',
     'accounts.apps.AccountsConfig',
+    'posts.apps.PostsConfig',
+    #'star_ratings',
+    #'review',
+    #'posts1.apps.PostsConfig',
 ]
 
 MIDDLEWARE = [
@@ -125,3 +129,6 @@ STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
