@@ -40,11 +40,9 @@ INSTALLED_APPS = [
     #'login',
     #'home',
     #'accounts',
-    'accounts.apps.AccountsConfig',
+    #'accounts.apps.AccountsConfig',
     'posts.apps.PostsConfig',
-    #'star_ratings',
-    #'review',
-    #'posts1.apps.PostsConfig',
+
 ]
 
 MIDDLEWARE = [
@@ -83,8 +81,14 @@ WSGI_APPLICATION = 'Recipe.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'recipedb',
+        'USER': 'user2',
+        'PASSWORD': 'user2@123',
+        'HOST': 'localhost',
+        'PORT': '3306',
+
     }
 }
 
