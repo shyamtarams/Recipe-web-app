@@ -5,3 +5,6 @@ __pycache__
 __init__.py
 *.png
 *.xml
+*.jpeg
+*.jpg
+.idea
