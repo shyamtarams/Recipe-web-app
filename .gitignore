@@ -1,5 +1,7 @@
 db.sqlite3
-.idea/workspace.xml
+*.idea/workspace.xml
 migrations
 __pycache__
 __init__.py
+*.png
+*.xml
