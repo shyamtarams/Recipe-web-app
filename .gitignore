@@ -4,3 +4,9 @@ migrations
 __pycache__
 __init__.py
 *.xml
+*.png
+*.xml
+*.jpeg
+*.jpg
+*.idea
+*.pyc
