@@ -1,3 +1,4 @@
+{% extends 'base.html' %}
 <h1>Django Image Uploading</h1>
 <ul>
   {% for post in object_list %}
@@ -8,3 +9,48 @@
 
   {% endfor %}
 </ul>
+
+
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+
+
+
+
+<h1>TESTY FOODS</h1>
+
+
+<div class="card" style="width: 40rem;">
+
+
+
+  {% for post in object_list %}>>
+    <h2>{{ post.title }}</h2>
+<div class="card-body">
+    <img   class="card-img-top"  src="{{ post.cover.url}}" alt="{{ post.title }}">
+
+  <h2>{{ post.description }}</h2>
+
+
+  {% endfor %}
+
+
+  </div>
+  </div>
+</div>
+
+
+
+
+{% else %}
+
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}">login</a>
+
+{% endif %}
+{% endblock %}
+
+
