@@ -37,14 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #'login',
-    #'home',
-    #'accounts',
+
     'accounts.apps.AccountsConfig',
     'posts.apps.PostsConfig',
-    #'star_ratings',
-    #'review',
-    #'posts1.apps.PostsConfig',
+
 ]
 
 MIDDLEWARE = [
@@ -83,8 +79,13 @@ WSGI_APPLICATION = 'Recipe.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'recipedb',
+        'USER': 'user2',
+        'PASSWORD': 'user2@123',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
@@ -92,20 +93,6 @@ DATABASES = {
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
-AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
-]
 
 
 # Internationalization

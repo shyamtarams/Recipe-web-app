@@ -6,10 +6,11 @@ from django import forms
 class Post(models.Model):
     title = models.CharField(max_length=50)
     cover = models.ImageField(upload_to='images/')
-    title2 = models.TextField()
+    description = models.TextField(null='True')
+
 
     def __str__(self):
-        # return self.title, self.title2
-       # return self.title2
-        return '{} {} '.format(self.title, self.title2)
+        #return self.title
+
+        return '{} {} '.format(self.title, self.description)
 
