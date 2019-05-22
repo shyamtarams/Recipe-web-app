@@ -1,6 +1,7 @@
-
+<!DOCTYPE html>
 <html>
 <head>
+
 
 <script>
 function myFunction() {
@@ -77,9 +78,9 @@ function change( el )
     <span class="navbar-branch navbar-left" style="color:white">Recipe web</span>
 
     <form class="form-inline">
-    <a class="btn btn-outline-info" type="button" href="/post/">SHARE YOUR RECIPE</a>
-    <a class="btn btn-outline-warning" type="button"  href="/admin/">LOG AS ADMIN</a>
-    <a class="btn btn-outline-danger" type="button"  href="{%url 'logout'%}">LOGOUT</button></a>
+    <a class="btn btn-outline-info" type="button" href="/post/">SHARE YOUR RECIPE</a> &nbsp &nbsp &nbsp &nbsp
+    <a class="btn btn-outline-warning" type="button"  href="/admin/"> &nbsp &nbsp LOG AS ADMIN &nbsp &nbsp </a>&nbsp &nbsp &nbsp &nbsp
+    <a class="btn btn-outline-danger" type="button"  href="{%url 'logout'%}"> &nbsp &nbsp &nbsp &nbspLOGOUT &nbsp &nbsp &nbsp &nbsp </button></a>
 
   </form>
   <ul class="nav navbar-nav navbar-right">
@@ -101,17 +102,10 @@ function change( el )
           <h1 class="mt-0"></h1>
           <hr class="mt-0 mb-2">
 
-
-  <meta charset="utf-8">
-  <title>{% block title %}{% endblock %}</title>
-</head>
-<body>
-
   <main>
     {% block content %}
     {% endblock %}
   </main>
-
           </div>
       </div>
     </div>
@@ -124,6 +118,7 @@ function change( el )
     <div class="footer">footer<strong>not fixed</strong>.</div>
 
 </div>
+
 
 </body>
 </html>
