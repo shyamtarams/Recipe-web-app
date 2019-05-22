@@ -2,6 +2,7 @@
 
 {% block title %}Home{% endblock %}
 
+<<<<<<< HEAD
 
 
 
@@ -31,6 +32,22 @@
     <img   class="card-img-top"  src="{{ post.cover.url}}" alt="{{ post.title }}">
 
   <h2>{{ post.description }}</h2>
+=======
+{% block content %}
+{% if user.is_authenticated %}
+  Hi {{ user.username }}!
+  <p><a href="{% url 'logout' %}">logout</a></p>
+
+
+
+<h1>TESTY FOODS</h1>
+<ul>
+  {% for post in object_list %}
+    <h2>{{ post.title }}</h2>
+
+    <img src="{{ post.cover.url}}" alt="{{ post.title }}">
+    <h2>{{ post.description }}</h2>
+>>>>>>> d565d42d064f11730f9e0abb801f668e673a7074
 
 
 <input type="button" class="btn  btn-info"   value="Like" onclick="return change(this);" />
@@ -64,12 +81,18 @@
 
     <hr>
   {% endfor %}
+<<<<<<< HEAD
 
 
   </div>
   </div>
 </div>
 
+=======
+</ul>
+
+
+>>>>>>> d565d42d064f11730f9e0abb801f668e673a7074
 
 {% else %}
 
@@ -77,6 +100,7 @@
   <a href="{% url 'login' %}">login</a>
 
 {% endif %}
+<<<<<<< HEAD
 
 <script>
 
@@ -147,6 +171,8 @@
 
 
 </script>
+=======
+>>>>>>> d565d42d064f11730f9e0abb801f668e673a7074
 {% endblock %}
 
 

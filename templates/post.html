@@ -4,8 +4,13 @@
 
 {% block content %}
 {% if user.is_authenticated %}
+<<<<<<< HEAD
 
 
+=======
+  Hi {{ user.username }}!
+  <p><a href="{% url 'logout' %}">logout</a></p>
+>>>>>>> d565d42d064f11730f9e0abb801f668e673a7074
 
 
 <h1>Create Post Page</h1>
