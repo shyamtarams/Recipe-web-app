@@ -1,7 +1,6 @@
-<!DOCTYPE html>
+
 <html>
 <head>
-
 
 <script>
 function myFunction() {
@@ -102,10 +101,17 @@ function change( el )
           <h1 class="mt-0"></h1>
           <hr class="mt-0 mb-2">
 
+
+  <meta charset="utf-8">
+  <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+
   <main>
     {% block content %}
     {% endblock %}
   </main>
+
           </div>
       </div>
     </div>
@@ -118,7 +124,6 @@ function change( el )
     <div class="footer">footer<strong>not fixed</strong>.</div>
 
 </div>
-
 
 </body>
 </html>

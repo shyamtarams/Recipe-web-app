@@ -70,7 +70,9 @@ DATABASES = {
     'default': {
 
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'recipedb2',
+
+        'NAME': 'recipedb',
+
         'USER': 'user2',
         'PASSWORD': 'user2@123',
         'HOST': 'localhost',

@@ -7,10 +7,12 @@
 
 
 
+
 <h2><center>Sign up</center></h2>
   <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit" onclick="myFunction()" class="btn btn-info btn-lg btn-block">Sign up</button>
+
   </form>
 {% endblock %}
