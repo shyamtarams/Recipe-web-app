@@ -4,15 +4,15 @@
 
 {% block content %}
 {% if user.is_authenticated %}
+
   Hi {{ user.username }}!
   <p><a href="{% url 'logout' %}">logout</a></p>
-
 
 <h1>Create Post Page</h1>
 <form method="post" enctype="multipart/form-data">
   {% csrf_token %}
   {{ form.as_p }}
-  <button type="submit">Submit New Post</button>
+  <button type="submit" class="btn btn-success">Submit New Post</button>
 </form>
 
 
