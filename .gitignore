@@ -4,3 +4,5 @@ migrations
 __pycache__/
 __init__.py
 *.xml
+home
+review
