@@ -59,15 +59,14 @@ function change( el )
 
 
 
+
+
   <title>{% block title %}Recipe web app{% endblock %}</title>
 </head>
 
 
 
 <body class="body">
-
- <div id="page-container">
-   <div id="content-wrap">
 
 
 <nav class="navbar navbar-dark bg-dark">
@@ -76,21 +75,27 @@ function change( el )
 
     <form class="form-inline">
     <a class="btn btn-outline-info" type="button" href="/post/">SHARE YOUR RECIPE</a> &nbsp &nbsp &nbsp &nbsp
-    <a class="btn btn-outline-warning" type="button"  href="http://localhost:8000/admin/"> &nbsp &nbsp LOG AS ADMIN &nbsp &nbsp </a>&nbsp &nbsp &nbsp &nbsp
-    <a class="btn btn-outline-danger" type="button"  href="{%url 'logout'%}"> &nbsp &nbsp &nbsp &nbsp LOGOUT &nbsp &nbsp &nbsp &nbsp </button></a>
+
+        <a class="btn btn-outline-warning" type="button"  href="/admin/"> &nbsp &nbsp LOG AS ADMIN &nbsp &nbsp </a>&nbsp &nbsp &nbsp &nbsp
+    <a class="btn btn-outline-danger" type="button"  href="{% url 'login'%}"> &nbsp &nbsp &nbsp &nbsp LOGOUT &nbsp &nbsp &nbsp &nbsp </button></a>
 
   </form>
   <ul class="nav navbar-nav navbar-right">
 
 
 
- <button class="btn btn-outline-success" type="button">{{ user.username }}</button>
+ <button class="btn btn-success" type="button">{{ user.username }}</button>
 
 
     </ul>
 
 
 </nav>
+
+
+ <div id="page-container">
+   <div id="content-wrap">
+
 
  <div class="container">
 
@@ -112,7 +117,7 @@ function change( el )
 
 </div>
 
-    <div class="footer">footer<strong>not fixed</strong>.</div>
+<div class="footer"><b>Recipe web </b> is built for sharing your own recipe to others. </div>
 
 </div>
 

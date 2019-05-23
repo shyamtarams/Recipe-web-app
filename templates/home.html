@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 
+
 {% block title %}Home{% endblock %}
 
 
@@ -27,6 +28,9 @@
 
   {% for post in object_list %}
     <h2>{{ post.title }}</h2>
+  <h3>posted : {{ post.author }}</h3>
+
+  <h4> date : {{ post.publish_date }}</h4>
 <div class="card-body">
     <img   class="card-img-top"  src="{{ post.cover.url}}" alt="{{ post.title }}">
 
@@ -54,7 +58,7 @@
 {% else %}
 
   <p>You are not logged in</p>
-  <a href="{% url 'login' %}">login</a>
+  <a class="btn btn-info"  href="{% url 'login' %}">login</a>
 
 {% endif %}
 
