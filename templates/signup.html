@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'login_base.html' %}
 
 {% block title %}Sign Up{% endblock %}
 
@@ -12,5 +12,8 @@
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit" onclick="myFunction()" class="btn btn-info btn-lg btn-block">Sign up</button>
+
+    <a href="{% url 'login'%}"  class="btn btn-success btn-lg btn-block"> Already have one  ?,  then Login here</a>
+
   </form>
 {% endblock %}

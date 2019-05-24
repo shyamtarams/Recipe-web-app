@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html>
 <head>
 
@@ -71,24 +71,26 @@ function change( el )
 
 <nav class="navbar navbar-dark bg-dark">
  <!-- <span class="navbar-toggler-icon"></span>-->
-    <span  ><a href="http://localhost:8000/guest_home/"    class="navbar-branch btn btn-info navbar-left"  style="color:white">Recipe web</a></span>
+    <span class="navbar-branch navbar-left" style="color:white">Recipe web</span>
 
+    <form class="form-inline">
+    <a class="btn btn-outline-info" type="button" href="/post/">SHARE YOUR RECIPE</a> &nbsp &nbsp &nbsp &nbsp
 
+        <a class="btn btn-outline-warning" type="button"  href="/admin/"> &nbsp &nbsp LOG AS ADMIN &nbsp &nbsp </a>&nbsp &nbsp &nbsp &nbsp
+    <a class="btn btn-outline-danger" type="button"  href="{% url 'logout'%}"> &nbsp &nbsp &nbsp &nbsp LOGOUT &nbsp &nbsp &nbsp &nbsp </button></a>
+
+  </form>
   <ul class="nav navbar-nav navbar-right">
 
 
 
-        <a class="btn btn-outline-success" type="button"  href="{% url 'login'%}"> &nbsp &nbsp &nbsp &nbsp LOGIN &nbsp &nbsp &nbsp &nbsp </button></a>
+ <button class="btn btn-success" type="button">{{ user.username }}</button>
+
 
     </ul>
 
 
 </nav>
-
-
-
-
-
 
 
  <div id="page-container">

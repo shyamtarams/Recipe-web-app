@@ -1,24 +1,7 @@
-
+<!DOCTYPE html>
 <html>
 <head>
 
-
-<script>
-function myFunction() {
-  alert("Log in as a new user");
-}
-
-function change( el )
-{
-    if ( el.value === "Like" )
-        el.value = "Unlike";
-    else
-        el.value = "Like";
-}
-
-
-
-</script>
 <style>
 .body {
   background-color : #FFF8dc
@@ -71,14 +54,19 @@ function change( el )
 
 <nav class="navbar navbar-dark bg-dark">
  <!-- <span class="navbar-toggler-icon"></span>-->
-    <span  ><a href="http://localhost:8000/guest_home/"    class="navbar-branch btn btn-info navbar-left"  style="color:white">Recipe web</a></span>
+    <span class="navbar-branch navbar-left" style="color:white">Recipe web</span>
 
+    <form class="form-inline">
+<!--    <a class="btn btn-outline-info" type="button" href="">SHARE YOUR RECIPE</a> &nbsp &nbsp &nbsp &nbsp
+-->
 
+  </form>
   <ul class="nav navbar-nav navbar-right">
 
 
 
-        <a class="btn btn-outline-success" type="button"  href="{% url 'login'%}"> &nbsp &nbsp &nbsp &nbsp LOGIN &nbsp &nbsp &nbsp &nbsp </button></a>
+ <a class="btn btn-success"  href="{% url 'login'%}" >LOGIN</a>
+
 
     </ul>
 
@@ -87,11 +75,6 @@ function change( el )
 
 
 
-
-
-
-
- <div id="page-container">
    <div id="content-wrap">
 
 

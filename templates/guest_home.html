@@ -1,10 +1,15 @@
-{% extends 'post_base.html' %}
-{% block title %}Home{% endblock %}
+{% extends 'guest_base.html' %}
+{% block title %}Guest_Home{% endblock %}
 {% block content %}
-{% if user.is_authenticated %}
 
 <h1><center>MY RECIPE</center></h1>
 
+
+
+
+
+
+ <div id="page-container">
 
 <div class="alert alert-success" role="alert">
   <h4 class="alert-heading">WELCOME</h4>
@@ -13,8 +18,9 @@
   <p class="mb-0">And also see others posts</p>
 </div>
 
-<div class="card" style="width: 40rem;">
 
+
+<div class="card" style="width: 40rem;">
 
 
   {% for post in object_list %}
@@ -24,15 +30,6 @@
   <h4> date : {{ post.publish_date }}</h4>
 <div class="card-body">
     <img   class="card-img-top"  src="{{ post.cover.url}}" alt="{{ post.title }}">
-
-  <h2>{{ post.description }}</h2>
-
-    <!--more-->
-
-<a href="{% url 'more' post.id %}" class="btn btn-outline-danger">&nbsp more &nbsp </a>
-
-<input type="button" class="btn  btn-info"   value="Like" onclick="return change(this);" />
-
 
 
 
@@ -46,12 +43,6 @@
 </div>
 
 
-{% else %}
-
-  <p>You are not logged in</p>
-  <a class="btn btn-info"  href="{% url 'login' %}">login</a>
-
-{% endif %}
 
 
 

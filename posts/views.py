@@ -21,10 +21,6 @@ class CreatePostView(CreateView):
         f.save()
         return super(CreatePostView, self).form_valid(form)
 
-
-
-
-
 def CreateMoreView(request, id):
     post = Post.objects.get(id=id)
 
@@ -37,10 +33,9 @@ def CreateMoreView(request, id):
     return render(request, 'more.html', context)
 
 
-'''
+
+class GuestHomePageView(ListView):
     model = Post
-    form_class = PostForm
-    template_name = 'more.html'
-    success_url = reverse_lazy('more')
-   
-   '''
+    template_name = 'guest_home.html'
+
+s
