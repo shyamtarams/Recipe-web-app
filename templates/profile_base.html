@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<script>
+function myFunction() {
+  alert("Log in as a new user");
+}
+
+function change( el )
+{
+    if ( el.value === "Like" )
+        el.value = "Unlike";
+    else
+        el.value = "Like";
+}
+
+
+
+</script>
+<style>
+.body {
+  background-color : #FFF8dc
+
+  }
+
+.footer {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;
+}
+
+
+
+
+
+</style>
+   <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+
+
+  <title>{% block title %}Recipe web {% endblock %}</title>
+</head>
+
+
+
+<body class="body">
+
+
+<nav class="navbar navbar-dark bg-dark">
+ <!-- <span class="navbar-toggler-icon"></span>-->
+    <span class="navbar-branch navbar-left" style="color:white"><a href="http://localhost:8000/" style="color:white;text-decoration: none">Recipe web</a></span>
+
+    <form class="form-inline">
+
+
+    <!--<a class="btn btn-info" href="http://localhost:8000/" > &nbsp; &nbsp; Home &nbsp; &nbsp; </a> &nbsp; &nbsp; &nbsp;&nbsp;-->
+    <a class="btn btn-info" type="button" href="/post/">SHARE YOUR RECIPE</a> &nbsp &nbsp &nbsp &nbsp
+
+       <!-- <a class="btn btn-outline-warning" type="button"  href="/admin/"> &nbsp &nbsp LOG AS ADMIN &nbsp &nbsp </a>&nbsp &nbsp &nbsp &nbsp-->
+    <a class="btn btn-outline-danger" type="button"  href="{% url 'logout'%}"> &nbsp &nbsp &nbsp &nbsp LOGOUT &nbsp &nbsp &nbsp &nbsp </button></a>
+
+  </form>
+  <ul class="nav navbar-nav navbar-right">
+
+
+
+ <button class="btn btn-success" type="button">{{ user.username }}</button>
+
+
+    </ul>
+
+
+</nav>
+
+
+ <div id="page-container">
+   <div id="content-wrap">
+
+
+ <div class="container">
+
+      <div class="row justify-content-center">
+        <div class="col-11">
+          <h1 class="mt-0"></h1>
+          <hr class="mt-0 mb-2">
+
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+          </div>
+      </div>
+    </div>
+ </div>
+
+
+
+</div>
+
+<div class="footer"><b>Recipe web </b> is built for sharing your own recipe to others. </div>
+
+</div>
+
+
+</body>
+</html>

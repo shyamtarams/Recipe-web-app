@@ -30,7 +30,7 @@ def CreateMoreView(request, id):
 
     }
 
-    return render(request, 'more.html', context)
+    return render(request, 'more_new.html', context)
 
 
 
@@ -38,4 +38,7 @@ class GuestHomePageView(ListView):
     model = Post
     template_name = 'guest_home.html'
 
-s
+class PromiseCreateView(CreateView):
+    model = Post
+    form_class = 'PostForm'
+

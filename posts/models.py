@@ -9,7 +9,7 @@ class Post(models.Model):
     cover = models.ImageField(upload_to='images/')
     description = models.TextField(null='True')
     author = models.ForeignKey(User,  on_delete=models.CASCADE, null='True')
-    publish_date = models.DateField(default=datetime.datetime.today, null='True')
+    publish_date = models.DateField(null='True')
 
 
 
