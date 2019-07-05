@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Logout{% endblock %}
+
+{% block content %}
+
+
+
+
+ <div id="page-container">
+
+<div class="alert alert-success" role="alert">
+  <h4 class="alert-heading">successfully logged out</h4>
+  <p>This is website which where you can post your recipe.</p>
+  <hr>
+  <p class="mb-0">And also see others posts</p>
+</div>
+ </div>
+
+
+  <p>successfully logged out</p>
+  <a class="btn btn-info" href="{% url 'login' %}">login</a>
+
+
+
+{% endblock %}

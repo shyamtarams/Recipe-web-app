@@ -29,6 +29,12 @@ INSTALLED_APPS = [
 
     'accounts.apps.AccountsConfig',
     'posts.apps.PostsConfig',
+    'guest_home',
+    'user_profile',
+     'comments',
+    'social_django',
+    'django_social_share',
+    #'social_widgets',
 
 ]
 
@@ -40,6 +46,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
 ROOT_URLCONF = 'Recipe.urls'
@@ -55,12 +63,32 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
+
+
             ],
         },
     },
 ]
 
 WSGI_APPLICATION = 'Recipe.wsgi.application'
+
+
+
+
+AUTHENTICATION_BACKENDS = [
+
+    'django.contrib.auth.backends.ModelBackend',
+
+    'social_core.backends.github.GithubOAuth2',
+    'social_core.backends.linkedin.LinkedinOAuth2',
+
+    'social_core.backends.facebook.FacebookOAuth2',
+
+    'social_core.backends.google.GoogleOAuth2',
+    ]
 
 
 # Database
@@ -70,9 +98,9 @@ DATABASES = {
     'default': {
 
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'recipedb2',
-        'USER': 'user2',
-        'PASSWORD': 'user2@123',
+        'NAME': 'recipedb3',
+        'USER': 'user3',
+        'PASSWORD': 'user3@123',
         'HOST': 'localhost',
         'PORT': '3306',
     }
@@ -104,7 +132,44 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = 'home'
-LOGOUT_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'login'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+if DEBUG:
+   STATIC_ROOT = "Projects/test_projects/new_design/Recipe-web-app/static"
+STATICFILES_DIRS =(
+
+os.path.join(BASE_DIR, "templates/static"),
+)
+
+
+
+SOCIAL_AUTH_GITHUB_KEY = '91e1d93236716e26e2b9'
+SOCIAL_AUTH_GITHUB_SECRET ='9a478e68684acf8d567e800a168dc98a0da8e8e6'
+
+
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
+
+
+SOCIAL_AUTH_FACEBOOK_KEY = '585819201928577'
+SOCIAL_AUTH_FACEBOOK_SECRET = '6adb27c9272eb9992a2a805cbeca6172'
+
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '856435669466-3brk7olhkmvntpgtmhrtu5vq8fm7dbt0.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'fXSMyW0J4QgH8hGJIqq33VAl'
+
+
+SOCIAL_AUTH_LINKEDIN_OAUTH2_KEY = '811rl6kiistmhu'
+SOCIAL_AUTH_LINKEDIN_OAUTH2_SECRET = 'ciznZCdqTGNCxsmX'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'shyam.krishnan141@gmail.com'
+EMAIL_HOST_PASSWORD = 'agoanbird'
+
