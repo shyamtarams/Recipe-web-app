@@ -27,7 +27,7 @@ class CreatePostView(CreateView):
     success_url = reverse_lazy('home')
 
     def form_valid(self, form):
-        f = form.save(commit=True)
+        f = form.save(commit=False)
         f.author = self.request.user
         f.save()
         return super(CreatePostView, self).form_valid(form)
