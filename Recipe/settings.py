@@ -31,8 +31,10 @@ INSTALLED_APPS = [
     'posts.apps.PostsConfig',
     'guest_home',
     'user_profile',
-    'comments',
+     'comments',
     'social_django',
+    'django_social_share',
+    #'social_widgets',
 
 ]
 
@@ -65,6 +67,7 @@ TEMPLATES = [
                 'social_django.context_processors.backends',
                 'social_django.context_processors.login_redirect',
 
+
             ],
         },
     },
@@ -95,9 +98,9 @@ DATABASES = {
     'default': {
 
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'recipedb2',
-        'USER': 'user2',
-        'PASSWORD': 'user2@123',
+        'NAME': 'recipedb3',
+        'USER': 'user3',
+        'PASSWORD': 'user3@123',
         'HOST': 'localhost',
         'PORT': '3306',
     }
@@ -161,3 +164,12 @@ SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'fXSMyW0J4QgH8hGJIqq33VAl'
 
 SOCIAL_AUTH_LINKEDIN_OAUTH2_KEY = '811rl6kiistmhu'
 SOCIAL_AUTH_LINKEDIN_OAUTH2_SECRET = 'ciznZCdqTGNCxsmX'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'shyam.krishnan141@gmail.com'
+EMAIL_HOST_PASSWORD = 'agoanbird'
+

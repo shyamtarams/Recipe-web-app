@@ -1,7 +1,41 @@
 {%load staticfiles%}
 
+
+
+{% if user.is_authenticated %}
+
+
+
+
+
 <html lang="en">
 <head>
+
+    <script language="javascript">
+    function myFunction(){
+setTimeout(function(){
+   window.location.reload(1);
+}, 200);  }
+
+   function refreshPage(){
+    window.location.reload();
+}
+
+
+  /*var clicks = 0;
+    function hello(btn) {
+        clicks += 1;
+        document.getElementById("clicks").innerHTML = clicks;
+        document.getElementById(btn.id).disabled = true;
+    };
+
+function disableButton(btn){
+				document.getElementById(btn.id).disabled = true;
+				alert("Button has been disabled.");
+			}*/
+
+
+</script>
     <!-- Required Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,7 +89,7 @@
                                 </ul>
                             </li>-->
                             <!--<li><a href="contact-us.html">contact</a></li>-->
-                            <li><a class="btn btn-info" >Logout</a></li>
+                            <li><a class="btn btn-info" href="{% url 'login' %}"  onclick="myFunction()">Logout</a></li>
                         </ul>
                     </div>
                 </div>
@@ -78,29 +112,7 @@
     </section>
     <!-- Banner Area End -->
 
-    <!-- Welcome Area Starts -->
-    <!--
-    <section class="welcome-area section-padding2">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-6 align-self-center">
-                    <div class="welcome-img">
-                        <img src="{% static 'assets/images/welcome-bg.png' %}" class="img-fluid" alt="">
-                    </div>
-                </div>
-                <div class="col-md-6 align-self-center">
-                    <div class="welcome-text mt-5 mt-md-0">
-                        <h3><span class="style-change">welcome to </span>Cook<br>Book</h3>
-                        <p class="pt-3">Creatye your recipe and share your recipe to others </p>
-                        <p>see what others have been posted</p>
-                        <a href="#" class="template-btn mt-3">Post Your Recipe Secret</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    -->
-    <!-- Welcome Area End -->
+
 
     <!-- Food Area starts -->
     <section class="food-area section-padding">
@@ -115,7 +127,7 @@
             </div>
 
             <div class="row">
-                 <div class="col-lg-12">
+                <div class="col-lg-12">
 
    <!--<div class="col-md-4 col-sm-6">-->
               <!--  <div class="col-md-4 col-sm-6">-->
@@ -135,18 +147,58 @@
                             </div>
                             <p class="pt-3">postec by : {{ post.author }}</p>
                                 <!-- <p class="pt-3"> {{ post.description }} <br></p>-->
-                             {% for Comment in object_list %}
 
-                             <p class="pt-3">
-                                 {{ user.username }}
-                                 {{ Comment.comment }} <br></p>
+
+
+                          <button class=" btn btn-primary"><a href="http://www.facebook.com/sharer.php?u=http://shyamkpv.pythonanywhere.com " style="color: white">share</a>
+                          </button>
+
+
+                            <!--<a href="/comments/comments/" class="btn btn-info">comment</a>-->
+
+
+
+
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            {{ total_likes }} Like{{ total_likes|pluralize }}<br>
+                            <form action="{% url 'like_post' post.id %}" method="post">
+                                <br>
+                                {% csrf_token %}
+                                {% if is_liked %}
+                                <button type="submit" name="post_id" value="{{ post.id }}" class="btn btn-danger" >liked &nbsp;</button>
+                                {% else %}
+                                <button type="submit" name="post_id" value="{{ post.id }}" class="btn btn-primary" >like &nbsp; &nbsp; </button>
+                                {% endif %}
+
+
+                            </form>
+
+                            <!--<button class="btn btn-info" onclick="hello(this)" id="btn1" name="post_id" value="{{ post.id}}" type="submit">Like</button>-->
+
+                            <!--<p>Total likes <a id="clicks">0</a></p>-->
+
+
+
+                            {% for comment in comments %}
+
+                            {{ comment.content }}
+                            <p> {{ comment.user }}</p>
+
                             {% endfor %}
 
-                            <a href="/comments/comments/" class="btn btn-info">comment</a>
+
+
+
+
+
+
+
 
 
                         </div>
+
                     </div>
+
                  </div>
                 </div>
 
@@ -221,3 +273,13 @@
     <script src="{% static 'assets/js/main.js' %}"></script>
 </body>
 </html>
+
+{% else %}
+
+
+  <p><script> alert("you are not login")</script></p>
+  <a class="btn btn-info" href="{% url 'login' %}">login</a>
+
+
+
+{% endif %}

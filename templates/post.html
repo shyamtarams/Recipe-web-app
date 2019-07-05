@@ -5,11 +5,24 @@
 
 {% block title %}CookBook_post{% endblock %}
 
-{% block content %}
 {% if user.is_authenticated %}
+
+{% block content %}
+
+
+
+
 
 <html lang="en">
 <head>
+
+    <script language="javascript">
+    function myFunction(){
+setTimeout(function(){
+   window.location.reload(1);
+}, 200);}
+</script>
+
     <!-- Required Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -69,7 +82,7 @@
                             </li>-->
                            <!-- <li><a href="contact-us.html">contact</a></li>-->
 
-                            <li><a class="btn btn-info">Logout</a></li>
+                            <li><a class="btn btn-info" href="{% url 'login'%}"  onclick="myFunction()" >Logout</a></li>
                         </ul>
                     </div>
                 </div>
@@ -139,11 +152,15 @@
     <input type="title" class="form-control" id="id_title" name="title" placeholder="title ">
 <br><br>
 
+        <input type="email" class="form-control" id="id_email" name="email" placeholder="email ">
+<br><br>
+
+
 
 
   <div class="custom-file">
     <input type="file" class="custom-file-input" id="id_cover" name="cover"
-      aria-describedby="inputGroupFileAddon01" placeholder="choosef file">
+      aria-describedby="inputGroupFileAddon01" placeholder="choose file">
     <label class="custom-file-label" for="id_cover">Choose file</label>
   </div>
 </div><br>
@@ -167,8 +184,9 @@
     <label class="custom-file-label" for="id_profile">Choose file</label>
   </div>-->
 
-    <a  type="submit" class="btn btn-success" href="/more_new.html/">Submit New Post</a>
-
+    <!--<a  type="submit" class="btn btn-success" href="/more_new.html/">Submit New Post</a>
+     -->
+    <button  type="submit" class="btn btn-success" >Submit New Post</button>
 
 
 </form>
@@ -239,14 +257,14 @@ Copyright &copy;no rights reserved <class="fa fa-heart-o" aria-hidden="true"></i
 </body>
 </html>
 
-
+{% endblock %}
 
 
 {% else %}
-  <p>You are not logged in</p>
+  <p><script> alert("you sre not login")</script></p>
   <a class="btn btn-info" href="{% url 'login' %}">login</a>
 {% endif %}
-{% endblock %}
+
 
 
 

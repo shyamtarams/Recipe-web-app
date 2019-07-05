@@ -1,6 +1,6 @@
 from django.urls import path
 
-from .views import HomePageView, CreatePostView
+from .views import HomePageView, CreatePostView, like_post
 from . import views
 
 urlpatterns = [

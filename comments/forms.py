@@ -16,11 +16,11 @@ class PostForm(forms.ModelForm):
         }
 
 
-from .models import Comment
+#from .models import Comment
 
 class PostComment(forms.ModelForm):
 
     class Meta:
-        model = Comment
+        #model = Comment
         fields = ['comment']
 
