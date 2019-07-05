@@ -1,0 +1,51 @@
+{% extends 'guest_base.html' %}
+{% block title %}Guest_Home{% endblock %}
+{% block content %}
+
+<h1><center>MY RECIPE</center></h1>
+
+
+
+
+
+
+ <div id="page-container">
+
+<div class="alert alert-success" role="alert">
+  <h4 class="alert-heading">WELCOME</h4>
+  <p>This is website which where you can post your recipe.</p>
+  <hr>
+  <p class="mb-0">And also see others posts</p>
+</div>
+
+
+
+<div class="card" style="width: 40rem;">
+
+
+  {% for post in object_list %}
+    <h2>{{ post.title }}</h2>
+  <h3>posted : {{ post.author }}</h3>
+
+  <h4> date : {{ post.publish_date }}</h4>
+<div class="card-body">
+    <img   class="card-img-top"  src="{{ post.cover.url}}" alt="{{ post.title }}">
+
+
+
+
+    <hr>
+  {% endfor %}
+
+
+  </div>
+  </div>
+</div>
+
+
+
+
+
+{% endblock %}
+
+
