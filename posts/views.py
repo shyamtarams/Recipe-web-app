@@ -14,8 +14,6 @@ from .models import Post
 from django.core.mail import send_mail
 
 
-
-
 class HomePageView(ListView):
     model = Post
     template_name = 'home.html'

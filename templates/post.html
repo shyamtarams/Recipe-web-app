@@ -1,19 +1,14 @@
+
 {% extends 'post_base_new.html' %}
-
 {%load staticfiles%}
-
 
 {% block title %}CookBook_post{% endblock %}
 
 {% if user.is_authenticated %}
 
 {% block content %}
+<html>
 
-
-
-
-
-<html lang="en">
 <head>
 
     <script language="javascript">
@@ -43,8 +38,11 @@ setTimeout(function(){
     <link rel="stylesheet" href="{% static 'assets/css/jquery.datetimepicker.min.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
 </head>
+
 <body>
-    <!-- Preloader Starts -->
+
+
+<!-- Preloader Starts -->
     <div class="preloader">
         <div class="spinner"></div>
     </div>
@@ -134,62 +132,33 @@ setTimeout(function(){
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <!--
-                    <h2>Natural ingredients and testy food</h2>
-                    <h4 class="mt-4">some trendy and popular courses offerd</h4>
-                    <a href="" class="template-btn template-btn2 mt-4">reservation</a>
-                    -->
+
+
+<form  method="post" enctype="multipart/form-data">
+    {% csrf_token %}
 
 
 
-
-<form method="post" enctype="multipart/form-data">
-  {% csrf_token %}
-
-
-    <div class="form-group">
-
-    <input type="title" class="form-control" id="id_title" name="title" placeholder="title ">
-<br><br>
-
-        <input type="email" class="form-control" id="id_email" name="email" placeholder="email ">
-<br><br>
+    <input type="title" class="form-control" id="id_title" name="title" placeholder="title " required="" maxlength="50"><br><br>
 
 
 
-
-  <div class="custom-file">
+    <div class="custom-file">
     <input type="file" class="custom-file-input" id="id_cover" name="cover"
-      aria-describedby="inputGroupFileAddon01" placeholder="choose file">
-    <label class="custom-file-label" for="id_cover">Choose file</label>
-  </div>
-</div><br>
+       placeholder="choose file" required="">
+    <label class="custom-file-label" for="id_cover" >Choose file</label>
+    </div><br><br>
+
+    <input id ="id_description" name="description" class="form-control form-control-lg" placeholder="Write about it" cols="40" required="" rows="10"><br><br>
+
+    <input id="id_publish_date" name="publish_date" type="date" class="form-control form-control" placeholder="Write about it" ><br><br>
 
 
 
-    <input id ="id_description" name="description" class="form-control form-control-lg" placeholder="Write about it" ><br>
-<br>
 
-    <input id="id_publish_date" name="publish_date" type="date" class="form-control form-control" placeholder="Write about it" >
-
-<br><br><br>
-
-
-    <!--<input type="file" name="profile" id="id_profile" required="" accept="image/*"  class="form-control form-control">
-
-  -->
-   <!--  <div class="custom-file">
-    <input type="file" class="custom-file-input" id="id_profile"
-      aria-describedby="inputGroupFileAddon01" placeholder="choosef file" name="profile">
-    <label class="custom-file-label" for="id_profile">Choose file</label>
-  </div>-->
-
-    <!--<a  type="submit" class="btn btn-success" href="/more_new.html/">Submit New Post</a>
-     -->
-    <button  type="submit" class="btn btn-success" >Submit New Post</button>
-
-
+    <input type="submit" value="Submit" class="btn btn-success" >
 </form>
+
 
 
 
@@ -254,6 +223,8 @@ Copyright &copy;no rights reserved <class="fa fa-heart-o" aria-hidden="true"></i
     <script src="{% static 'assets/js/vendor/jquery.datetimepicker.full.min.js' %}"></script>
     <script src="{% static 'assets/js/vendor/jquery.nice-select.min.js' %}"></script>
     <script src="{% static 'assets/js/main.js' %}"></script>
+
+
 </body>
 </html>
 
