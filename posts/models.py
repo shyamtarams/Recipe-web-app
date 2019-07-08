@@ -4,7 +4,6 @@ from django.contrib.auth.models import User
 
 class Post(models.Model):
     title = models.CharField(max_length=50)
-    email = models.EmailField(blank=True)
     cover = models.ImageField(upload_to='images/')
     description = models.TextField(null='True')
     likes = models.ManyToManyField(User, related_name='likes', blank='True')
@@ -13,7 +12,7 @@ class Post(models.Model):
     #a =models.ManyToManyField(User,related_name='add', blank='True')
 
     def __str__(self):
-        return' {} {} {} '.format(self.title, self.description,self.publish_date)
+        return' {} {} {} '.format(self.title, self.description, self.publish_date)
 
     def total_likes(self):
         return self.likes.count()
